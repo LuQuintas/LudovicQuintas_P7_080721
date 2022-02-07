@@ -1,30 +1,72 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app">
+    <router-view></router-view>
   </div>
-  <router-view/>
 </template>
 
+<script>
+
+export default {
+  name: 'app',
+  components: {
+  }
+
+}
+</script>
+
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+body{
+  background-color: #32527a;
+  display: flex;
   text-align: center;
-  color: #2c3e50;
+  justify-content: center;
+  padding: 32px;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+.card{
+  max-width: 100%;
+  width: 500px;
+  background:white;
+  border-radius: 16px;
+  padding: 32px;
+  &__title{
+    text-align: center;
+    font-weight: 800;
+  }
+  &__subtitle{
+    text-align: center;
+    color:#666;
+    font-weight: 500;
   }
 }
+
+.card__action {
+    color:#2196F3;
+    text-decoration: underline;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+.button{
+  background: #2196f3;
+  color: white;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 15px;
+  border: none;
+  width: 100%;
+  padding: 16px;
+  transition: .3s background-color;
+  box-shadow:  2px 2px 10px #666;
+  transition: .3s box-shadow;
+  &:hover {
+    cursor:pointer;
+    box-shadow: none;
+    background: #1976D2;
+  }
+}
+
 </style>
