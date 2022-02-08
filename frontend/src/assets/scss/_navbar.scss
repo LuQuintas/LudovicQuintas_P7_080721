@@ -1,10 +1,42 @@
-.navbar{
+nav{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 200px;
-    .logo{
-        height: 150px;
-        width: 150px;
+    height: 80px;
+    // border-bottom: 0.5px solid rgb(161, 146, 146);
+    box-shadow: 2px 2px 8px rgb(52, 55, 56);
+
+    .navbar-logo__img{
+        height: 200px;
+        width: 200px;
+        padding-left: 15px;
+    }
+
+    .menu-nav{
+        list-style: none;
+        display: flex;
+        padding: 0 15px;
+        align-items: flex-end;
+        li{
+            color: white;
+            padding: 10px;
+            p{font-size: 18px;
+            }
+            span{
+                padding-left: 7px;
+            }
+            &:hover{
+                color:#3c9cd7;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .profil, .déconnexion{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
     }
 }
 

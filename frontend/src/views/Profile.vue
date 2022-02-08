@@ -1,4 +1,5 @@
 <template>
+    <Navbar/>
     <div class="card">
         <h1 class="card__title"> Espace Perso</h1>
         <p class="card__subtitle"> Voici qui je suis...</p>
@@ -13,8 +14,10 @@
 </template>
 
 <script>
+import Navbar from '../components/Navbar.vue';
 export default {
-    name:'Profile',
+  components: { Navbar },
+    name:'Profil',
 
     methods: {
         
